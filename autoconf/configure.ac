@@ -30,7 +30,6 @@ dnl List every Makefile that exists within your source tree
 AC_CONFIG_MAKEFILE(Makefile)
 AC_CONFIG_MAKEFILE(lib/Makefile)
 AC_CONFIG_MAKEFILE(lib/HelloLLVM/Makefile)
-AC_CONFIG_MAKEFILE(lib/Passes/Makefile)
 AC_CONFIG_MAKEFILE(tools/Makefile)
 AC_CONFIG_MAKEFILE(tools/COTPasses/Makefile)
 
