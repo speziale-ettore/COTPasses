@@ -1,4 +1,4 @@
-##===- lib/Makefile ----------------------------------------*- Makefile -*-===##
+##===- lib/HelloLLVM/Makefile ------------------------------*- Makefile -*-===##
 
 #
 # Indicate where we are relative to the top of the source tree.
