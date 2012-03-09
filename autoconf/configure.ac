@@ -20,18 +20,19 @@ dnl the LLVM autoconf directory, not here.
 AC_CONFIG_AUX_DIR($LLVM_SRC/autoconf)
 
 dnl Verify that the source directory is valid
-AC_CONFIG_SRCDIR(["Makefile.common.in"])
+AC_CONFIG_SRCDIR(["Makefile.config.in"])
 
-dnl Configure a common Makefile
-AC_CONFIG_FILES(Makefile.common)
+dnl Configure a config Makefile
+AC_CONFIG_FILES(Makefile.config)
 
 dnl Configure project makefiles
 dnl List every Makefile that exists within your source tree
 AC_CONFIG_MAKEFILE(Makefile)
+AC_CONFIG_MAKEFILE(Makefile.common)
 AC_CONFIG_MAKEFILE(lib/Makefile)
-AC_CONFIG_MAKEFILE(lib/HelloLLVM/Makefile)
 AC_CONFIG_MAKEFILE(tools/Makefile)
-AC_CONFIG_MAKEFILE(tools/COTPasses/Makefile)
+AC_CONFIG_MAKEFILE(test/Makefile)
+AC_CONFIG_MAKEFILE(test/Makefile.tests)
 
 dnl **************************************************************************
 dnl * Determine which system we are building on

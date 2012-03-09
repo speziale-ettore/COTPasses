@@ -17,6 +17,3 @@ PROJ_OBJ_ROOT := $(subst //,/,@abs_top_objdir@)
 
 # Set the root directory of this project's install prefix.
 PROJ_INSTALL_ROOT := @prefix@
-
-# Include LLVM's Master Makefile.
-include $(LLVM_SRC_ROOT)/Makefile.common
