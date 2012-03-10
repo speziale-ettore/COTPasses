@@ -30,5 +30,5 @@ define i32 @fact(i32 %n) nounwind {
   ret i32 %12
 }
 
-;CHECK:      Printing analysis 'Count instructions in functions' for function 'fact':
+;CHECK:      Printing analysis 'Count instructions' for function 'fact':
 ;CHECK-NEXT:   Instruction count: 14

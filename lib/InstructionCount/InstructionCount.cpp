@@ -42,11 +42,11 @@ using namespace llvm;
 
 INITIALIZE_PASS_BEGIN(InstructionCount,
                       "instruction-count",
-                      "Count instructions in functions",
+                      "Count instructions",
                       true,
                       true)
 INITIALIZE_PASS_END(InstructionCount,
                     "instruction-count",
-                    "Count instructions in functions",
+                    "Count instructions",
                     true,
                     true)
