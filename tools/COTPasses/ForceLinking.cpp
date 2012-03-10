@@ -30,6 +30,7 @@ public:
 
     // Transformations.
     CreateHelloLLVMPass();
+    CreateFunctionEraserPass();
   }
 };
 
@@ -48,6 +49,7 @@ public:
 
     // Transformations.
     initializeHelloLLVMPass(Registry);
+    initializeFunctionEraserPass(Registry);
   }
 };
 

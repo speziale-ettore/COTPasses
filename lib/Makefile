@@ -8,6 +8,6 @@ LEVEL = ..
 #
 # List all of the subdirectories that we will compile.
 #
-DIRS = InstructionCount HelloLLVM
+DIRS = InstructionCount HelloLLVM FunctionEraser
 
 include $(LEVEL)/Makefile.common

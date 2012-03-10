@@ -18,6 +18,7 @@ InstructionCount *CreateInstructionCountPass();
 
 // Transformations.
 llvm::Pass *CreateHelloLLVMPass();
+llvm::Pass *CreateFunctionEraserPass();
 
 } // End namespace cot.
 
@@ -30,6 +31,7 @@ void initializeInstructionCountPass(PassRegistry &Registry);
 
 // Transformations.
 void initializeHelloLLVMPass(PassRegistry &Registry);
+void initializeFunctionEraserPass(PassRegistry &Registry);
 
 } // End namespace llvm.
 

@@ -35,6 +35,9 @@ public:
     return "Instruction counter";
   }
 
+public:
+  unsigned GetInstructionCount() const { return ICount; }
+
 private:
   // This is the information computed by the analysis.
   unsigned ICount;
