@@ -3,7 +3,7 @@ COT -- Code Optimization and Transformation Examples
 ====================================================
 
 This is a simple [LLVM][www/llvm] project containing code used during the
-classes. Some passes makes no sense (e.g. function-erase), but they are used to
+classes. Some passes are meaningless (e.g. function-erase), but they are used to
 show how to use LLVM API.
 
 Quick Start
