@@ -6,6 +6,6 @@ LIBRARYNAME = COTPasses
 
 LOADABLE_MODULE = 1
 
-USEDLIBS = cotHelloLLVM.a
+USEDLIBS = cotInstructionCount.a cotHelloLLVM.a
 
 include $(LEVEL)/Makefile.common

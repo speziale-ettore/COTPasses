@@ -25,6 +25,10 @@ public:
     if(std::getenv("bar") != (char*) -1)
       return;
 
+    // Analysis.
+    CreateInstructionCountPass();
+
+    // Transformations.
     CreateHelloLLVMPass();
   }
 };
@@ -39,6 +43,10 @@ public:
   ForceInitialization() {
     llvm::PassRegistry &Registry = *llvm::PassRegistry::getPassRegistry();
 
+    // Analysis.
+    initializeInstructionCountPass(Registry);
+
+    // Transformations.
     initializeHelloLLVMPass(Registry);
   }
 };

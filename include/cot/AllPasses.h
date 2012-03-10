@@ -11,6 +11,12 @@
 // returning a llvm::Pass * you have to return a pointer to the analysis class.
 namespace cot {
 
+class InstructionCount;
+
+// Analysis.
+InstructionCount *CreateInstructionCountPass();
+
+// Transformations.
 llvm::Pass *CreateHelloLLVMPass();
 
 } // End namespace cot.
@@ -19,6 +25,10 @@ namespace llvm {
 
 class PassRegistry;
 
+// Analysis.
+void initializeInstructionCountPass(PassRegistry &Registry);
+
+// Transformations.
 void initializeHelloLLVMPass(PassRegistry &Registry);
 
 } // End namespace llvm.
