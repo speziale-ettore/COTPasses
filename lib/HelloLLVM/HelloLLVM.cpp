@@ -157,7 +157,7 @@ llvm::Function &HelloLLVM::GetPrintf(llvm::Module &Mod) {
   llvm::LLVMContext &Ctx = Mod.getContext();
   llvm::FunctionType *PrintfTy;
 
-#if defined(__i386__) || defined(__X86_64__)
+#if defined(__i386__) || defined(__x86_64__)
   PrintfTy = llvm::FunctionType::get(llvm::Type::getInt32Ty(Ctx),
                                      llvm::Type::getInt8PtrTy(Ctx),
                                      true);
