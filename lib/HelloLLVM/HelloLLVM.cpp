@@ -89,7 +89,18 @@ llvm::Function &HelloLLVM::GetHelloWorld(llvm::Module &Mod, bool &Modified) {
 
   // We want to generate 'printf("Hello, World!")'. First parameter is a
   // constant.
-  llvm::Constant *MsgInit = llvm::ConstantArray::get(Ctx, "Hello, World!\n");
+  std::string helloWorldString = "Hello, World!\n";
+
+  llvm::IntegerType * ElementType = llvm::IntegerType::get(Ctx, 8);
+  llvm::ArrayType * ArrayType = llvm::ArrayType::get(ElementType, 14);
+
+  llvm::SmallVector<llvm::Constant *, 14> helloWorld;
+  for (std::string::iterator itr = helloWorldString.begin(),
+           end = helloWorldString.end();
+       itr != end; ++itr)
+    helloWorld.push_back(llvm::ConstantInt::get(ElementType, *itr));
+
+  llvm::Constant *MsgInit = llvm::ConstantArray::get(ArrayType, helloWorld);
 
   // Put it into a global variable.
   Msg = new llvm::GlobalVariable(Mod,
